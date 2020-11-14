@@ -78,7 +78,7 @@ def encode_convs(profix):
         labels = remodel.decode(np.array(data[i]))[1]
         sent_label.append(labels)
     
-    with open(profix + '_sent_trans_cons_label_2.pkl', 'wb') as f:
+    with open(profix + '_sent_trans_cons_label.pkl', 'wb') as f:
         pickle.dump(sent_label, f)
     return sent_label
 
