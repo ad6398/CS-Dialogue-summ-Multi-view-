@@ -30,7 +30,7 @@ def concat_conversation(data, labels, sep = ' | ', label_type = '_sent_c99_label
 
         if len(labels) > 1:
             
-            if label_type == '_sent_c99_label'
+            if label_type == '_sent_c99_label':
                 temp = ''
                 temp += sentences[0]
                 for j in range(1, len(sentences)):
