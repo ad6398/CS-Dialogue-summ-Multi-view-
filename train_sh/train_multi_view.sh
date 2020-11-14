@@ -3,7 +3,7 @@ WARMUP_UPDATES=200
 LR=3e-05
 MAX_TOKENS=800
 UPDATE_FREQ=32
-BART_PATH=PATH-TO-BART-MODEL (./bart.large/model.pt)
+BART_PATH=""
 
 CUDA_VISIBLE_DEVICES=0 python train.py cnn_dm-bin_2 \
     --restore-file $BART_PATH \
