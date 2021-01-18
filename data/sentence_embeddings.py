@@ -37,7 +37,9 @@ def encode_conversation(profix):
     
     embeddings = []
     with torch.no_grad():
-        for i in tqdm(range(0, len(sent))):
+        for i in range(0, len(sent)):
+            if i%100 ==0:
+                print(i)
             #tokens_input = tokenize_conv(sent[i]).cuda()
             embedding = embedder.encode(sent[i])
 
