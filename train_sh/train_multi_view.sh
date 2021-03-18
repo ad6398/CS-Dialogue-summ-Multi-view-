@@ -21,12 +21,15 @@ CUDA_VISIBLE_DEVICES=0 python train.py cnn_dm-bin_2 \
     --dropout 0.1 --attention-dropout 0.1 \
     --weight-decay 0.01 --optimizer adam --adam-betas "(0.9, 0.999)" --adam-eps 1e-08 \
     --clip-norm 0.1 \
-    --lr-scheduler polynomial_decay --lr $LR --total-num-update $TOTAL_NUM_UPDATES --warmup-updates $WARMUP_UPDATES \
+    --lr-scheduler polynomial_decay --lr $LR 
+#     --total-num-update $TOTAL_NUM_UPDATES 
+    --max-epoch 4
+    --warmup-updates $WARMUP_UPDATES \
     --update-freq $UPDATE_FREQ \
     --skip-invalid-size-inputs-valid-test \
     --find-unused-parameters \
     --ddp-backend=no_c10d \
-    --required-batch-size-multiple 1 \
+    --required-batch-size-multiple 8 \
     --no-epoch-checkpoints \
     --save-dir checkpoints\
     --lr-weight 1000 \
