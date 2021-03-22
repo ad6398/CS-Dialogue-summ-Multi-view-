@@ -29,7 +29,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py cnn_dm-bin_2 \
     --skip-invalid-size-inputs-valid-test \
     --find-unused-parameters \
     --ddp-backend=no_c10d \
-    --required-batch-size-multiple 8 \
+    --required-batch-size-multiple 1 \
     --no-epoch-checkpoints \
     --save-dir checkpoints\
     --lr-weight 1000 \
